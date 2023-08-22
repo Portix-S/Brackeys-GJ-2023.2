@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2394428-759b-4640-957b-b87ff2c86c7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/.vsconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/Portix.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/Portix.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/Portix.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/Portix.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Assets/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/MemorySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/MemorySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/XRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Game Jam Brackeys/ProjectSettings/XRSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2UJuYePSNe97qt9CRtpFHwwkpzH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2394428-759b-4640-957b-b87ff2c86c7f" name="Changes" comment="" />
+      <created>1692670060118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692670060118</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
