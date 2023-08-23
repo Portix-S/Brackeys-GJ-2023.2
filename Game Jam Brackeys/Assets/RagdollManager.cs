@@ -9,12 +9,15 @@ public class RagdollManager : MonoBehaviour
     public Animator anim;
     public GameObject body;
     public GameObject head;
+    [SerializeField] Transform playerInitialPosition;
     Collider[] ragdollColliders;
     Rigidbody[] limbsRigidbodies;
+    Rigidbody rBody;
     public float windStrength = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
+        rBody = GetComponent<Rigidbody>();
         GetRagDollBits();
         RagDollMode(true);
 
@@ -29,13 +32,13 @@ public class RagdollManager : MonoBehaviour
         {
             //RagDollMode(false);
         }
-        if(Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             //LookAtMousePos();
+
         }
         if (Input.GetMouseButtonUp(0))
         {
-            
             /*Vector3 mousePosition = Input.mousePosition;
 
             Ray ray = Camera.main.ScreenPointToRay(mousePosition);
@@ -50,21 +53,18 @@ public class RagdollManager : MonoBehaviour
                 //float rotationSpeed = 5.0f;
                 //body.transform.rotation = Quaternion.Slerp(body.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
             }
-            head.GetComponent<Rigidbody>().AddForce(new Vector3(hit.point.x - transform.position.x, hit.point.y - transform.position.y, 0).normalized * 300f, ForceMode.Impulse);
-
+            RagDollMode(true);
+            Vector3 dir = new Vector3(hit.point.x - transform.position.x, hit.point.y - transform.position.y, 0).normalized * 300f;
+            head.GetComponent<Rigidbody>().AddForce(dir , ForceMode.Impulse);
+            Debug.Log(dir);
             foreach (Rigidbody rb in limbsRigidbodies)
             {
-                rb.GetComponent<Rigidbody>().AddForce(new Vector3(hit.point.x - transform.position.x, hit.point.y - transform.position.y, 0).normalized * 150f, ForceMode.Impulse);
-
+                rb.GetComponent<Rigidbody>().AddForce(dir.normalized * 150f, ForceMode.Impulse) ;
             }
+        }
             */
-
-            RagDollMode(true);
-            
-
         }
     }
-
     public void ApplyRagdollForces(Vector3 dir, float mag)
     {
         head.GetComponent<Rigidbody>().AddForce(dir * mag, ForceMode.Impulse);
@@ -115,10 +115,13 @@ public class RagdollManager : MonoBehaviour
     }
     private void WindSimulation()
     {
+       
         foreach (Rigidbody rb in limbsRigidbodies)
         {
             rb.GetComponent<Rigidbody>().AddForce(Vector3.up * windStrength * Random.Range(-1, 1.1f), ForceMode.Impulse);
 
         }
-    }
+        //rBody.AddForce ( new Vector3(0, (playerInitialPosition.transform.position.y - transform.position.y) * 10, 0), ForceMode.Impulse);
+        //Debug.Log(playerInitialPosition.transform.position.y - transform.position.y);
+    }   
 }
