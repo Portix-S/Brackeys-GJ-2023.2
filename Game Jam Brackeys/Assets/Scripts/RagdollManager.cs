@@ -119,7 +119,6 @@ public class RagdollManager : MonoBehaviour
         foreach (Rigidbody rb in limbsRigidbodies)
         {
             rb.GetComponent<Rigidbody>().AddForce(Vector3.up * windStrength * Random.Range(-1, 1.1f), ForceMode.Impulse);
-
         }
         //rBody.AddForce ( new Vector3(0, (playerInitialPosition.transform.position.y - transform.position.y) * 10, 0), ForceMode.Impulse);
         //Debug.Log(playerInitialPosition.transform.position.y - transform.position.y);
