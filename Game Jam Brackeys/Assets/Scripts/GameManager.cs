@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
     IEnumerator SlowDown()
     {
         backgroundSpeed = 5f;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1f);
         backgroundSpeed = 10f;
     }
+
+    
 }
