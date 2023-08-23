@@ -56,4 +56,10 @@ public class PlayerMovement : MonoBehaviour
         //if (!isOnMenu)
         rb.velocity = moveDirection * moveSpeed;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "StageFinish")
+            Destroy(other.gameObject);
+    }
 }
