@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -48,10 +49,17 @@ public class PlayerMovement : MonoBehaviour
         transform.position = objPos;
     }
 
+
     private void FixedUpdate()
     {
         // Adds velocity to rigidbody decide how to move
         //if (!isOnMenu)
         rb.velocity = moveDirection * moveSpeed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "StageFinish")
+            Destroy(other.gameObject);
     }
 }
