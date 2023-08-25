@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 2a8e86e9fea4d0845853a72378bb02cb
   - enabled: 1
-    path: Assets/Scenes/TesteMerge.unity
-    guid: 4d1b6b33c7b1d8f45ac5f57537eb7097
+    path: Assets/Scenes/Lenadro.unity
+    guid: 7f29eb8a07be7d145b15e7bc0105887c
   m_configObjects: {}

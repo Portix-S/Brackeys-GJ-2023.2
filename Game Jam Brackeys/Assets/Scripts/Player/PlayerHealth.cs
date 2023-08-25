@@ -20,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
     private bool slowMotionActive = false;
     public void Start()
     {
-
+        Time.timeScale = 1;
+        //Time.fixedDeltaTime = 0.01f * Time.timeScale;
         originalColor = Color.red;
         material.color = Color.red;
         
@@ -103,6 +104,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             Time.timeScale = 1.0f;
+            Time.fixedDeltaTime = 0.01f * Time.timeScale;
         }
     }
 }
