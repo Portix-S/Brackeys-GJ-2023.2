@@ -29,13 +29,12 @@ public class PlayerHealth : MonoBehaviour
 
     private void FixedUpdate()
     {
-        SlowMotion();
+        //SlowMotion();
     }
     private void Update()
     {
-        if (isTransitioning && !canTakeDmg)
+        /*if (isTransitioning && !canTakeDmg)
         {
-            Debug.Log("HIT");
             currentTime += Time.deltaTime;
 
             // Calculate the current transparency value based on the transition progress
@@ -49,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             material.color = Color.red;
-        }
+        }*/
     }
 
     public void StartTransition()
@@ -81,11 +80,15 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator CanBeHit(float cd)
     {
+        float originalFixedDeltaTime = Time.fixedDeltaTime;
         slowMotionActive = true;
         canTakeDmg = false;
+        Time.timeScale = 0.5f;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
         yield return new WaitForSeconds(cd);
         canTakeDmg = true;
-        
+        Time.timeScale = 1.0f;
+        Time.fixedDeltaTime = originalFixedDeltaTime;
         material.color = Color.red;
         slowMotionActive = false;
     }

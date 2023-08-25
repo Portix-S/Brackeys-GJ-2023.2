@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         backgroundSpeed = baseSpeed / 3f;
         yield return new WaitForSeconds(1f);
-        baseSpeed += 5f;
+        baseSpeed += 5;
         backgroundSpeed = baseSpeed;
     }
 
