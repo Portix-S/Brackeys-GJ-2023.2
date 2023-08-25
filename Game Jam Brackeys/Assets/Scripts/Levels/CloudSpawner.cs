@@ -38,10 +38,9 @@ public class CloudSpawner : MonoBehaviour
         float scale = Random.Range(1f, 3f);
         cloud.transform.localScale = new Vector2(scale, scale);
 
-        float speed = Random.Range(2f, 5f);
+        float speed = Random.Range(1f, 4f);
         cloud.GetComponent<CloudScript>().StartFloating(speed, endPoint.transform.position.y);
-
-
+        Destroy(cloud, 5f);
     }
 
     void AttemptSpawn()

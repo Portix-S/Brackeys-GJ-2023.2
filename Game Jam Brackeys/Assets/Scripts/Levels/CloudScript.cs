@@ -16,10 +16,5 @@ public class CloudScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * Time.deltaTime * speed);
-
-        if (transform.position.y >= endPosY)
-        {
-            Destroy(gameObject);
-        }
     }
 }
