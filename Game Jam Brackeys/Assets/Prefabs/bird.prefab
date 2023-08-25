@@ -130,7 +130,7 @@ MonoBehaviour:
   dmg: 1
   force: 150
   feathersPrefab: {fileID: 5187069568323463014, guid: 6795adb780165d5448056b3a2b7464f2, type: 3}
-  speed: 0
+  speed: 4
 --- !u!65 &3092620661320329163
 BoxCollider:
   m_ObjectHideFlags: 0
