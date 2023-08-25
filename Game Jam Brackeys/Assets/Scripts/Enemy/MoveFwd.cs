@@ -36,8 +36,8 @@ public class MoveFwd : MonoBehaviour
             
             
             GameObject feathers = feathersPrefab;
-            Instantiate(feathers, transform.position, Quaternion.identity);
-            
+            GameObject spawn = Instantiate(feathers, transform.position, Quaternion.identity);
+            Destroy(spawn, 2f);
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector2.up * force * 2, ForceMode.Impulse);
             Destroy(gameObject);
         }
