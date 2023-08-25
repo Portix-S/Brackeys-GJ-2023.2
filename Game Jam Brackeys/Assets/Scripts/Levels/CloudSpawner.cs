@@ -15,21 +15,20 @@ public class CloudSpawner : MonoBehaviour
 
     Vector3 startPos;
 
-
+    [SerializeField] Transform parent;
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
         Prewarm();
         Invoke("AttemptSpawn", spawnInterval);
-
     }
 
     void SpawnCloud(Vector3 startPos)
     {
 
         int randomIndex = Random.Range(0, clouds.Length);
-        GameObject cloud = Instantiate(clouds[randomIndex], gameObject.transform.parent);
+        GameObject cloud = Instantiate(clouds[randomIndex], parent);
 
         float startX = Random.Range(startPos.x - 13f, startPos.x + 13f);
         float startZ = Random.Range(startPos.z - 4f, startPos.x + 4f);
@@ -47,6 +46,7 @@ public class CloudSpawner : MonoBehaviour
 
     void AttemptSpawn()
     {
+        startPos = transform.position;
         //check some things.
         SpawnCloud(startPos);
 
