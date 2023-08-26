@@ -73,7 +73,7 @@ public class PlayerHealth : MonoBehaviour
         
         if(life <= 0)
         {
-            menu.StopTime();
+            
             Die();
         }
    
@@ -81,6 +81,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
+        menu.StopTime();
         pm.enabled = false;
     }
 
