@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject menu;
+    [SerializeField] PlayerHealth health;
     float timeScale;
     bool isPaused;
     private void Start()
     {
         Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.01f;
     }
     private void Update()
     {
@@ -31,7 +33,11 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = timeScale;
+            if(health.life > 0)
+            {
+                Time.timeScale = timeScale;
+            }
+            
         }
     }
 
