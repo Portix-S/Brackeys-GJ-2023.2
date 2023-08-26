@@ -11,6 +11,7 @@ public class BubbleAnim : MonoBehaviour
     float counter;
     void Start()
     {
+        Time.timeScale = 1;
         animator = GetComponent<Animator>();
         cd = Random.Range(1f, 10f);
         counter = 0;
@@ -19,6 +20,7 @@ public class BubbleAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(counter + " - " + cd);
         counter += Time.deltaTime;
         if(counter >= cd)
         {
