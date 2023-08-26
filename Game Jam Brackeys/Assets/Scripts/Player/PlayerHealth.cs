@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -8,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public bool canTakeDmg;
     [SerializeField] float hitCd = 1;
     [SerializeField] GameObject[] lifeSprites;
-
+    [SerializeField] MenuManager menu;
     public float transitionDuration = 2.0f; // Duration of the transparency transition
     [SerializeField] Material material;
     private Color originalColor;
@@ -69,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
         
         if(life <= 0)
         {
+            menu.StopTime();
             Destroy(gameObject);
         }
    

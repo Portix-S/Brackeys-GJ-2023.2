@@ -97,8 +97,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.02006334, z: 0.13427229}
-  m_Center: {x: 0, y: -0.0000316596, z: -0.057774372}
+  m_Size: {x: 0.034166317, y: 0.23221242, z: 0.13427229}
+  m_Center: {x: -0.0013454157, y: 0.0006043911, z: -0.057774372}
 --- !u!54 &1754586599410035139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.0019627456, z: 0.12401005}
-  m_Center: {x: 0, y: 0.009018661, z: 0.07166259}
+  m_Size: {x: 0.02, y: 0.0059835147, z: 0.12401004}
+  m_Center: {x: 0, y: 0.009018665, z: 0.07166259}
 --- !u!114 &6451416707613328479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   sb: {fileID: 0}
+  endScreen: {fileID: 0}
+  scoreFinal: {fileID: 0}
+  timeText: {fileID: 0}
