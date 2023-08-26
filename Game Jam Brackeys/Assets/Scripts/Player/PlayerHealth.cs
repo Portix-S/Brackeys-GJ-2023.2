@@ -64,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeHit(int dmg)
     {
-        
+        Debug.Log(lifeSprites[life -1]);
         StartTransition();
         canTakeDmg = false;
         lifeSprites[life - 1].SetActive(false);

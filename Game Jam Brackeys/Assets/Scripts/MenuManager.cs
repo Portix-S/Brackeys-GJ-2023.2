@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] PlayerHealth health;
     float timeScale;
-    bool isPaused;
+    public bool isPaused;
     private void Start()
     {
         Time.timeScale = 1;
@@ -17,7 +17,6 @@ public class MenuManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-
             StopTime();
         }
     }

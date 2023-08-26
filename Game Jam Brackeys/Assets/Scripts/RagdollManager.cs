@@ -14,6 +14,7 @@ public class RagdollManager : MonoBehaviour
     Rigidbody[] limbsRigidbodies;
     Rigidbody rBody;
     public float windStrength = 5.0f;
+    [SerializeField] MenuManager menuManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -115,11 +116,15 @@ public class RagdollManager : MonoBehaviour
     }
     private void WindSimulation()
     {
-       
-        foreach (Rigidbody rb in limbsRigidbodies)
+        //*
+        if (!menuManager.isPaused)
         {
-            rb.GetComponent<Rigidbody>().AddForce(Vector3.up * windStrength * Random.Range(-1, 1.1f), ForceMode.Impulse);
+            foreach (Rigidbody rb in limbsRigidbodies)
+            {
+                rb.GetComponent<Rigidbody>().AddForce(Vector3.up * windStrength * Random.Range(-1, 1.1f), ForceMode.Impulse);
+            }
         }
+        //*/
         //rBody.AddForce ( new Vector3(0, (playerInitialPosition.transform.position.y - transform.position.y) * 10, 0), ForceMode.Impulse);
         //Debug.Log(playerInitialPosition.transform.position.y - transform.position.y);
     }   
