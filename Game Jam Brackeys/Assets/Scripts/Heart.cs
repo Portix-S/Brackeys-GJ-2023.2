@@ -9,7 +9,7 @@ public class Heart : MonoBehaviour
 
     void Start()
     {
-        
+        lifeSprites = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lifeImages;
     }
 
     // Update is called once per frame
