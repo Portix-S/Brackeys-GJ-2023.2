@@ -9,6 +9,8 @@ TagManager:
   - StageFinish
   - Spawner
   - CloudSpawner
+  - Despawner
+  - Stage2Spawner
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Explosion
   - Spawner
   - CloudSpawner
-  - 
-  - 
+  - Obstacle
+  - Enemy
   - 
   - 
   - 
