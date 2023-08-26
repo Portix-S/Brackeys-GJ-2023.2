@@ -19,9 +19,12 @@ public class PlayerHealth : MonoBehaviour
     private bool isTransitioning = false;
 
     private bool slowMotionActive = false;
+
+    [SerializeField] NewPlayerMovement pm;
     public void Start()
     {
         Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.02f;
         //Time.fixedDeltaTime = 0.01f * Time.timeScale;
         originalColor = Color.red;
         material.color = Color.red;
@@ -71,14 +74,14 @@ public class PlayerHealth : MonoBehaviour
         if(life <= 0)
         {
             menu.StopTime();
-            Destroy(gameObject);
+            Die();
         }
    
     }
 
     public void Die()
     {
-        Destroy(gameObject);
+        pm.enabled = false;
     }
 
     public IEnumerator CanBeHit(float cd)
@@ -101,12 +104,12 @@ public class PlayerHealth : MonoBehaviour
         if (slowMotionActive)
         {
             Time.timeScale = 0.5f;
-            Time.fixedDeltaTime = 0.02f * Time.timeScale; // Adjust this value as needed
+            //Time.fixedDeltaTime = 0.02f * Time.timeScale; // Adjust this value as needed
         }
         else
         {
             Time.timeScale = 1.0f;
-            Time.fixedDeltaTime = 0.01f * Time.timeScale;
+            //Time.fixedDeltaTime = 0.01f * Time.timeScale;
         }
     }
 }
