@@ -78,7 +78,7 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator CanBeHit(float cd)
+    public IEnumerator CanBeHit(float cd)
     {
         float originalFixedDeltaTime = Time.fixedDeltaTime;
         slowMotionActive = true;
