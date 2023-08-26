@@ -20,7 +20,7 @@ public class RagdollManager : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody>();
         GetRagDollBits();
-        RagDollMode(true);
+        RagDollMode(false);
 
     }
 
@@ -31,7 +31,7 @@ public class RagdollManager : MonoBehaviour
         //transform.position = rig.transform.position;
         if (Input.GetMouseButtonDown(0))
         {
-            //RagDollMode(false);
+            
         }
         if (Input.GetMouseButton(0))
         {
@@ -79,6 +79,7 @@ public class RagdollManager : MonoBehaviour
 
     public void RagDollMode(bool x)
     {
+        
         foreach(Collider col in ragdollColliders)
         {
             col.enabled = x;
@@ -89,7 +90,8 @@ public class RagdollManager : MonoBehaviour
         }
         anim.enabled = !x;
         //mainCollider.enabled = !x;
-        //GetComponent<Rigidbody>().isKinematic = !x;
+        GetComponent<Rigidbody>().isKinematic = !x;
+        
     }
 
     void GetRagDollBits()
