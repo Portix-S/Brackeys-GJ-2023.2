@@ -8,6 +8,7 @@ public class LevelSpawner : MonoBehaviour
     [SerializeField] Spawner[] obstacleSpawners;
     [SerializeField] Transform[] enemies;
     [SerializeField] Transform[] obstacles;
+    [SerializeField] float chanceToSpawn; // Arrumar depois, chance de spawnar inimigos diferentes
     // Start is called before the first frame update
     void Start()
     {

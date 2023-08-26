@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera vc;
     public float fovChangeSpeed = 1f;
     [SerializeField] public GameObject[] lifeImages;
+    [SerializeField] public GameObject[] particleSpawners;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ChangeParticleSpawner()
+    {
+        particleSpawners[currentStage].SetActive(false);
+        Destroy(particleSpawners[currentStage]);
+        if(currentStage < 3)
+            particleSpawners[currentStage + 1].SetActive(true);
     }
 
     public void ChangeLevel()

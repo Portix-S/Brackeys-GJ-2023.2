@@ -10,20 +10,24 @@ public class LevelChange : MonoBehaviour
     bool isDestroyed;
     [SerializeField] GameObject backgroundSpawner;
     [SerializeField] LayerMask backgroundSpawnerLayer;
+    [SerializeField] string stageSpawnerName;
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        stageSpawnerName = backgroundSpawner.name;
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Spawner")
+        if (other.gameObject.tag == stageSpawnerName)
         {
-            Debug.Log("Teste despawn");
-            Destroy(backgroundSpawner);
+            gm.ChangeParticleSpawner();
+            Debug.Log("Nuveis");
         }
+
+        
 
         if (other.gameObject.tag == "Player" && !isDestroyed)
         {

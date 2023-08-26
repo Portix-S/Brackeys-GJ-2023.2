@@ -7,11 +7,19 @@ public class CloudSpawner : MonoBehaviour
     [SerializeField]
     GameObject[] clouds;
 
+    [SerializeField] GameObject powerup;
+
     [SerializeField]
     float spawnInterval;
 
     [SerializeField]
     GameObject endPoint;
+
+    [SerializeField]
+    float minScale, maxScale, minSpeed, maxSpeed;
+
+    [SerializeField]
+    float depth, width, preWarmQuantity;
 
     Vector3 startPos;
 
@@ -26,21 +34,29 @@ public class CloudSpawner : MonoBehaviour
 
     void SpawnCloud(Vector3 startPos)
     {
-
         int randomIndex = Random.Range(0, clouds.Length);
         GameObject cloud = Instantiate(clouds[randomIndex], parent);
 
-        float startX = Random.Range(startPos.x - 13f, startPos.x + 13f);
-        float startZ = Random.Range(startPos.z - 4f, startPos.x + 4f);
+        float startX = Random.Range(startPos.x - width, startPos.x + width);
+        float startZ = Random.Range(startPos.z - depth, startPos.x + depth);
 
         cloud.transform.position = new Vector3(startX, startPos.y, startZ);
 
-        float scale = Random.Range(1f, 3f);
+        float scale = Random.Range(minScale, maxScale);
         cloud.transform.localScale = new Vector2(scale, scale);
 
-        float speed = Random.Range(1f, 4f);
+        float speed = Random.Range(minSpeed, maxSpeed);
         cloud.GetComponent<CloudScript>().StartFloating(speed, endPoint.transform.position.y);
-        Destroy(cloud, 5f);
+        Destroy(cloud, 10f);
+
+        int randomPowerUpChance = Random.Range(0, 100);
+        if(randomPowerUpChance < 5)
+        {
+            GameObject powerUp = Instantiate(powerup, parent);
+            startX = Random.Range(startPos.x - 13f, startPos.x + 13f);
+            powerUp.transform.position = new Vector3(startX, startPos.y, startPos.z);
+            Destroy(powerUp, 10f);
+        }
     }
 
     void AttemptSpawn()
@@ -54,7 +70,7 @@ public class CloudSpawner : MonoBehaviour
 
     void Prewarm()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < preWarmQuantity; i++)
         {
             Vector3 spawnPos = startPos + Vector3.right * (i * 2);
             SpawnCloud(spawnPos);
@@ -63,6 +79,12 @@ public class CloudSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        Destroy(endPoint.gameObject);
+        //Destroy(endPoint.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Despawner")
+            Debug.Log("Achou");
     }
 }

@@ -15,10 +15,11 @@ public class Spawner : MonoBehaviour
             spawned = true;
             if (enemyToSpawn != null)
             {
-                Debug.Log("Spawning" + enemyToSpawn.gameObject.name);
                 Transform spawned = Instantiate(enemyToSpawn, transform.position, enemyToSpawn.rotation, transform.parent);
+               // Debug.Log("Spawning" + enemyToSpawn.gameObject.name + "with rotation: " + spawned.rotation.y + "at possition: " + transform.position.x);
                 if (((spawned.rotation.y < 0f && transform.position.x < 0f) || (spawned.rotation.y > 0f && transform.position.x > 0f)) && hasEnemies)
                 {
+                    Debug.Log("changing rotation");
                     spawned.eulerAngles = new Vector3(0f, -spawned.localEulerAngles.y);
                     spawned.GetComponent<MoveFwd>().speed *= -1f;
                 }
