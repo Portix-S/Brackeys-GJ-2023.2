@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject[] lifeSprites;
+    [SerializeField] GameObject particlePrefab;
+
     void Start()
     {
         
@@ -14,5 +16,23 @@ public class Heart : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            
+            int l = other.transform.root.GetComponent<PlayerHealth>().life;
+            if ( l < 3)
+            {
+                other.transform.root.GetComponent<PlayerHealth>().life += 1;
+                lifeSprites[l].SetActive(true);
+                
+            }
+            GameObject exp = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
+        }
     }
 }

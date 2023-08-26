@@ -1,39 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-<<<<<<< HEAD
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-=======
-using UnityEngine;
-using UnityEngine.UI;
->>>>>>> Portix
 
 public class FinishLine : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     [SerializeField] Scrollbar sb;
-<<<<<<< HEAD
-    [SerializeField] GameObject endScreen;
-    [SerializeField] TextMeshProUGUI scoreFinal;
     [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI scoreFinal;
+    [SerializeField] GameObject endScreen;
     float fallTime = 0;
     float dif;
     float initialDist;
+    
     bool isFalling = true;
-
-=======
-    float dif;
-    float initialDist;
     // Start is called before the first frame update
->>>>>>> Portix
     void Start()
     {
         initialDist = playerTransform.position.y - transform.position.y;
     }
 
-<<<<<<< HEAD
     void Update()
     {
         Scroll();
@@ -67,12 +55,5 @@ public class FinishLine : MonoBehaviour
         
         
     }
-=======
     // Update is called once per frame
-    void Update()
-    {
-        dif = playerTransform.position.y - transform.position.y;
-        sb.value = dif / initialDist;
-    }
->>>>>>> Portix
 }

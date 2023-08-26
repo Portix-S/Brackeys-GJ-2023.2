@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int life = 2;
+    [SerializeField] public int life = 2;
     public bool canTakeDmg;
     [SerializeField] float hitCd = 1;
     [SerializeField] GameObject[] lifeSprites;

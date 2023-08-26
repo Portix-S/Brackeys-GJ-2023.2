@@ -38,7 +38,7 @@ public class MenuManager : MonoBehaviour
     public void RestartScene()
     {
         
-        SceneManager.LoadScene("Lenadro");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
 
