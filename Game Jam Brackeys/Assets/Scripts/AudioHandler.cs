@@ -10,7 +10,14 @@ public class AudioHandler : MonoBehaviour
     public static AudioHandler instance;
     private void Awake()
     {
-        if(instance == null)
+
+        
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -19,12 +26,6 @@ public class AudioHandler : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         audSource = GetComponent<AudioSource>();
         audSource.PlayOneShot(songs[0]);
     }
