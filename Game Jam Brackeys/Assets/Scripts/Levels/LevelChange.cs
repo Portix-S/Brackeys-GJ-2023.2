@@ -8,19 +8,23 @@ public class LevelChange : MonoBehaviour
     [SerializeField] float force = 150f;
     [SerializeField] Rigidbody[] rbs;
     bool isDestroyed;
+    [SerializeField] GameObject backgroundSpawner;
+    [SerializeField] LayerMask backgroundSpawnerLayer;
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Spawner")
+        {
+            Debug.Log("Teste despawn");
+            Destroy(backgroundSpawner);
+        }
+
         if (other.gameObject.tag == "Player" && !isDestroyed)
         {
             int rand = Random.Range(0, 2);
@@ -39,6 +43,7 @@ public class LevelChange : MonoBehaviour
                 rb.mass = 10f;
                 Destroy(rb.gameObject, 5f);
             }
+            Destroy(transform.parent.gameObject, 4f);
         }
     }
 }

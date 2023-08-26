@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public float backgroundSpeed = 10f;
     float baseSpeed = 10f;
     int currentStage = 0;
+    [SerializeField] PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         currentStage++;
         // Spawn new Enemies
-        StartCoroutine(SlowDown());
+        StartCoroutine(playerHealth.CanBeHit(0.7f));
         Debug.Log("Next stage: " + currentStage);
     }
 

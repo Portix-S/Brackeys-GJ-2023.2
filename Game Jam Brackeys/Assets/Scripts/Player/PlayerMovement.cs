@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = moveDirection * moveSpeed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // Mudar para quebrar a "mascara" depois de fazer a explosão
     {
         if (other.tag == "StageFinish")
             Destroy(other.gameObject);

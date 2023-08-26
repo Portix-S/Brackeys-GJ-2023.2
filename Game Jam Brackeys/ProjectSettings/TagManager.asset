@@ -8,6 +8,7 @@ TagManager:
   - Sling
   - StageFinish
   - Spawner
+  - CloudSpawner
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Explosion
   - Spawner
-  - 
+  - CloudSpawner
   - 
   - 
   - 
