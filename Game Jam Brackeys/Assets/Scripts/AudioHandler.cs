@@ -27,7 +27,7 @@ public class AudioHandler : MonoBehaviour
             Destroy(gameObject);
         }
         audSource = GetComponent<AudioSource>();
-        audSource.PlayOneShot(songs[0]);
+        //audSource.PlayOneShot(songs[0]);
     }
 
     // Update is called once per frame
