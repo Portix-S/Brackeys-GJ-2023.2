@@ -26,19 +26,20 @@ public class MenuManager : MonoBehaviour
     {
         isPaused = !isPaused;
         menu.SetActive(isPaused);
+        Debug.Log(isPaused);
         if (isPaused)
         {
             timeScale = Time.timeScale;
             Time.timeScale = 0;
+            Time.fixedDeltaTime = 0f;
         }
         else
         {
             if(health.life > 0)
             {
-                youLose.SetActive(true);
                 Time.timeScale = timeScale;
+                Time.fixedDeltaTime = 0.02f;
             }
-            
         }
     }
 

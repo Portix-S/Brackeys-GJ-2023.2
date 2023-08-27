@@ -51,9 +51,10 @@ public class FinishLine : MonoBehaviour
             timeText.transform.parent.gameObject.SetActive(false);
             scoreFinal.text = timeText.text;
             endScreen.SetActive(true);
+            Time.timeScale = 0;
         }
-        
-        
+
+
     }
     // Update is called once per frame
 }

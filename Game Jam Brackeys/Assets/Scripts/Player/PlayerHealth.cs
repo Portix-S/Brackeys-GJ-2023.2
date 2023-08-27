@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] GameObject youLose;
     private float currentTime = 0.0f;
     private bool isTransitioning = false;
-
+    bool isAlive = true;
     private bool slowMotionActive = false;
 
     [SerializeField] NewPlayerMovement pm;
@@ -71,8 +71,10 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(CanBeHit(hitCd));
         life -= dmg;
         
-        if(life <= 0)
+        if(life <= 0 && isAlive)
         {
+            Debug.Log("Moreu");
+            isAlive = false;
             youLose.SetActive(true);
             Die();
         }
@@ -88,16 +90,23 @@ public class PlayerHealth : MonoBehaviour
     public IEnumerator CanBeHit(float cd)
     {
         float originalFixedDeltaTime = Time.fixedDeltaTime;
-        slowMotionActive = true;
-        canTakeDmg = false;
-        Time.timeScale = 0.5f;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        if (life > 0)
+        {
+            slowMotionActive = true;
+            canTakeDmg = false;
+            Time.timeScale = 0.5f;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
         yield return new WaitForSeconds(cd);
-        canTakeDmg = true;
-        Time.timeScale = 1.0f;
-        Time.fixedDeltaTime = originalFixedDeltaTime;
-        material.color = Color.red;
-        slowMotionActive = false;
+        if (life > 0)
+        {
+            canTakeDmg = true;
+            Time.timeScale = 1.0f;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+            //Time.fixedDeltaTime = originalFixedDeltaTime;
+            material.color = Color.red;
+            slowMotionActive = false;
+        }
     }
 
     private void SlowMotion()

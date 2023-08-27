@@ -10,6 +10,7 @@ public class InstaKill : MonoBehaviour
         {
             collision.transform.root.GetComponent<PlayerHealth>().TakeHit(1);
             collision.transform.root.GetComponent<PlayerHealth>().TakeHit(1);
+            collision.transform.root.GetComponent<PlayerHealth>().TakeHit(1);
         }
     }
 }

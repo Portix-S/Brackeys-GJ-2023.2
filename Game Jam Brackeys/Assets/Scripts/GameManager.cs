@@ -32,8 +32,6 @@ public class GameManager : MonoBehaviour
         Destroy(particleSpawners[currentStage]);
         if(currentStage < 2)
             particleSpawners[currentStage + 1].SetActive(true);
-        if (currentStage == 1)
-            particleSpawners[currentStage + 2].SetActive(true);
     }
 
     public void ChangeLevel()
@@ -51,6 +49,7 @@ public class GameManager : MonoBehaviour
         float size = vc.m_Lens.OrthographicSize;
         float maxSize = size + 2;
         vc.m_Lens.OrthographicSize += 3f;
+        vc.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset.y -= 3f;
         playerMov.CalculateLimits();
         /*
         while (size < maxSize)
