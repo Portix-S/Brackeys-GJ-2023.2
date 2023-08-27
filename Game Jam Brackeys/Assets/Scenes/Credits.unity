@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708987, g: 0.37837064, b: 0.35722545, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2501,11 +2501,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSpeed: 10
+  currentStage: 0
   playerHealth: {fileID: 0}
   vc: {fileID: 0}
   fovChangeSpeed: 1
   lifeImages: []
   particleSpawners: []
+  playerMov: {fileID: 0}
 --- !u!4 &1202437179
 Transform:
   m_ObjectHideFlags: 0
@@ -3551,6 +3553,8 @@ MonoBehaviour:
 
     AST
 
+    Lay
+
     LENADRO
 
     PORTIX
@@ -3594,7 +3598,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
