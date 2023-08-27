@@ -17,6 +17,13 @@ public class NewPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public void CalculateLimits()
+    {
+        Debug.Log("Recalculating Limits");
+        limits.x += 5.5f;
+        limits.y += 5.5f;
+    }
+
     // Clamp player to screen
     void LateUpdate()
     {
@@ -31,6 +38,12 @@ public class NewPlayerMovement : MonoBehaviour
         xDir = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector3(xDir * movSpeed, -div, 0)  *  Time.deltaTime;
         div += grav * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other) // Mudar para quebrar a "mascara" depois de fazer a explosão
+    {
+        if (other.tag == "StageFinish")
+            Destroy(other.gameObject, 0f);
     }
 
 }

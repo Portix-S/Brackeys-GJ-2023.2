@@ -6,7 +6,7 @@ public class Heart : MonoBehaviour
 {
     [SerializeField] GameObject[] lifeSprites;
     [SerializeField] GameObject particlePrefab;
-
+    bool gaveHealth;
     void Start()
     {
         lifeSprites = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lifeImages;
@@ -20,9 +20,9 @@ public class Heart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && !gaveHealth)
         {
-            
+            gaveHealth = true;
             int l = other.transform.root.GetComponent<PlayerHealth>().life;
             if ( l < 3)
             {

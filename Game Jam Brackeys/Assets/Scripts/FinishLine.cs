@@ -39,7 +39,7 @@ public class FinishLine : MonoBehaviour
         if (isFalling)
         {
             fallTime += Time.deltaTime;
-            timeText.text = fallTime.ToString();
+            timeText.text = fallTime.ToString("F3");
         }
         
     }
@@ -51,9 +51,10 @@ public class FinishLine : MonoBehaviour
             timeText.transform.parent.gameObject.SetActive(false);
             scoreFinal.text = timeText.text;
             endScreen.SetActive(true);
+            Time.timeScale = 0;
         }
-        
-        
+
+
     }
     // Update is called once per frame
 }

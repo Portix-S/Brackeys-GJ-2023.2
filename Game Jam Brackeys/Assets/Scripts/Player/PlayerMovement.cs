@@ -60,6 +60,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other) // Mudar para quebrar a "mascara" depois de fazer a explosão
     {
         if (other.tag == "StageFinish")
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, 0.5f);
     }
 }

@@ -6,6 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject menu;
     [SerializeField] PlayerHealth health;
+    [SerializeField] GameObject youLose;
     float timeScale;
     public bool isPaused;
     private void Start()
@@ -25,18 +26,20 @@ public class MenuManager : MonoBehaviour
     {
         isPaused = !isPaused;
         menu.SetActive(isPaused);
+        Debug.Log(isPaused);
         if (isPaused)
         {
             timeScale = Time.timeScale;
             Time.timeScale = 0;
+            Time.fixedDeltaTime = 0f;
         }
         else
         {
             if(health.life > 0)
             {
                 Time.timeScale = timeScale;
+                Time.fixedDeltaTime = 0.02f;
             }
-            
         }
     }
 
