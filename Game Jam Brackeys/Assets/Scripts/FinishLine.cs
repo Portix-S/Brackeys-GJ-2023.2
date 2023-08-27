@@ -39,7 +39,7 @@ public class FinishLine : MonoBehaviour
         if (isFalling)
         {
             fallTime += Time.deltaTime;
-            timeText.text = fallTime.ToString();
+            timeText.text = fallTime.ToString("F3");
         }
         
     }

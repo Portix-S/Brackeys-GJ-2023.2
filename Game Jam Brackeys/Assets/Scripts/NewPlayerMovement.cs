@@ -17,6 +17,13 @@ public class NewPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public void CalculateLimits()
+    {
+        Debug.Log("Recalculating Limits");
+        limits.x += 5.5f;
+        limits.y += 5.5f;
+    }
+
     // Clamp player to screen
     void LateUpdate()
     {

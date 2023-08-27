@@ -66,7 +66,8 @@ public class PlayerHealth : MonoBehaviour
     {
         StartTransition();
         canTakeDmg = false;
-        lifeSprites[life - 1].SetActive(false);
+        if(life > 0)
+            lifeSprites[life - 1].SetActive(false);
         StartCoroutine(CanBeHit(hitCd));
         life -= dmg;
         
