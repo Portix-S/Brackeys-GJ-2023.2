@@ -20,7 +20,7 @@ public class RagdollManager : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody>();
         GetRagDollBits();
-        RagDollMode(false);
+        RagDollMode(true);
 
     }
 

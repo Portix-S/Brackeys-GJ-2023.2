@@ -8,7 +8,8 @@ public class InstaKill : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.root.GetComponent<PlayerHealth>().Die();
+            collision.transform.root.GetComponent<PlayerHealth>().TakeHit(1);
+            collision.transform.root.GetComponent<PlayerHealth>().TakeHit(1);
         }
     }
 }
