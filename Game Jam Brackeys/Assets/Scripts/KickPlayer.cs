@@ -7,6 +7,7 @@ public class KickPlayer : MonoBehaviour
     [SerializeField] RagdollManager rag;
     float sec = 5.2f;
     [SerializeField] float force = 50f;
+    [SerializeField] FinishLine fl;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,11 @@ public class KickPlayer : MonoBehaviour
     IEnumerator Kick(float sec)
     {
         yield return new WaitForSeconds(sec);
+        fl.isFalling = true;
         rag.RagDollMode(true);
         rag.head.GetComponent<Rigidbody>().AddForce((Vector3.left + Vector3.up) * force, ForceMode.Impulse);
         StartCoroutine(CanControl());
+
     }
 
     IEnumerator CanControl()

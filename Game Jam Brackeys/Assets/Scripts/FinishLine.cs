@@ -14,8 +14,8 @@ public class FinishLine : MonoBehaviour
     float fallTime = 0;
     float dif;
     float initialDist;
-    
-    bool isFalling = true;
+    public bool startCalc;
+    public bool isFalling = false;
     // Start is called before the first frame update
     void Start()
     {

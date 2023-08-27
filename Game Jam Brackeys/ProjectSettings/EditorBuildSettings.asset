@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
     guid: 4f2ef148493684c49b7522f383423d6a
+  - enabled: 1
+    path: Assets/Scenes/PlayScene Lenadro.unity
+    guid: 3fa62010525d59d4ca602687b16c7aa3
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: efbf7d3382cf9a24da7be2355fdd08a0
   m_configObjects: {}
