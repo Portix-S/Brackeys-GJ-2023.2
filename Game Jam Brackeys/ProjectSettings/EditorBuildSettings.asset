@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 2a8e86e9fea4d0845853a72378bb02cb
   - enabled: 1
-    path: Assets/Scenes/Lenadro.unity
-    guid: 7f29eb8a07be7d145b15e7bc0105887c
+    path: Assets/Scenes/Lenadro3.unity
+    guid: 81e5775fa345e4f4aaae535fd09b1a7b
   m_configObjects: {}
