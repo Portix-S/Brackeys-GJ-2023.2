@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Material material;
     private Color originalColor;
     private Color transparentColor;
-    
+    [SerializeField] GameObject youLose;
     private float currentTime = 0.0f;
     private bool isTransitioning = false;
     bool isAlive = true;

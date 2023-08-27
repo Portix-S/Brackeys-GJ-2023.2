@@ -20,7 +20,6 @@ public class BubbleAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(counter + " - " + cd);
         counter += Time.deltaTime;
         if(counter >= cd)
         {

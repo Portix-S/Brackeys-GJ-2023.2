@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject[] lifeImages;
     [SerializeField] public GameObject[] particleSpawners;
     [SerializeField] NewPlayerMovement playerMov;
+    [SerializeField] GameObject settings;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +63,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void ShowSettings(bool b)
+    {
+        settings.SetActive(b);
+    }
 
 }
