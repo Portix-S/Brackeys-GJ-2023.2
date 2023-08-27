@@ -10,10 +10,12 @@ public class LevelChange : MonoBehaviour
     bool isDestroyed;
     [SerializeField] GameObject backgroundSpawner;
     [SerializeField] LayerMask backgroundSpawnerLayer;
+    GameObject[] lifeSprites;
     [SerializeField] string stageSpawnerName;
     // Start is called before the first frame update
     void Start()
     {
+        lifeSprites = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lifeImages;
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         stageSpawnerName = backgroundSpawner.name;
     }
@@ -46,6 +48,13 @@ public class LevelChange : MonoBehaviour
                 rb.useGravity = true;
                 rb.mass = 10f;
                 Destroy(rb.gameObject, 5f);
+            }
+            int l = other.transform.root.GetComponent<PlayerHealth>().life;
+            if (l < 3)
+            {
+                other.transform.root.GetComponent<PlayerHealth>().life += 1;
+                lifeSprites[l].SetActive(true);
+
             }
             Destroy(transform.parent.gameObject, 4f);
         }

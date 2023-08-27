@@ -40,4 +40,10 @@ public class NewPlayerMovement : MonoBehaviour
         div += grav * Time.deltaTime;
     }
 
+    private void OnTriggerEnter(Collider other) // Mudar para quebrar a "mascara" depois de fazer a explosão
+    {
+        if (other.tag == "StageFinish")
+            Destroy(other.gameObject, 0f);
+    }
+
 }
