@@ -7,12 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public float backgroundSpeed = 10f;
     float baseSpeed = 10f;
-    int currentStage = 0;
+    public int currentStage = 0;
     [SerializeField] PlayerHealth playerHealth;
     [SerializeField] CinemachineVirtualCamera vc;
     public float fovChangeSpeed = 1f;
     [SerializeField] public GameObject[] lifeImages;
     [SerializeField] public GameObject[] particleSpawners;
+    [SerializeField] NewPlayerMovement playerMov;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +30,16 @@ public class GameManager : MonoBehaviour
     {
         particleSpawners[currentStage].SetActive(false);
         Destroy(particleSpawners[currentStage]);
-        if(currentStage < 3)
+        if(currentStage < 2)
             particleSpawners[currentStage + 1].SetActive(true);
+        if (currentStage == 1)
+            particleSpawners[currentStage + 2].SetActive(true);
     }
 
     public void ChangeLevel()
     {
         currentStage++;
-        // Spawn new Enemies
+        // Change Window Limits
         StartCoroutine(playerHealth.CanBeHit(0.7f));
         StartCoroutine(ChangeFoV());
         Debug.Log("Next stage: " + currentStage);
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
         float size = vc.m_Lens.OrthographicSize;
         float maxSize = size + 2;
         vc.m_Lens.OrthographicSize += 3f;
-
+        playerMov.CalculateLimits();
         /*
         while (size < maxSize)
         {

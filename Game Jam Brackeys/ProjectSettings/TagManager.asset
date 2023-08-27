@@ -11,6 +11,7 @@ TagManager:
   - CloudSpawner
   - Despawner
   - Stage2Spawner
+  - Stage3Spawner
   layers:
   - Default
   - TransparentFX
