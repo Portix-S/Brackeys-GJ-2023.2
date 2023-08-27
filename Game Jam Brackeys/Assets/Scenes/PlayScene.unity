@@ -7317,11 +7317,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -17.264185, y: 9.689146}
-      - {x: -17.064077, y: -9.109175}
-      - {x: -0.035691872, y: -9.224282}
-      - {x: 17.374208, y: -9.416402}
-      - {x: 17.171457, y: 9.605852}
+    - - {x: -0.81426245, y: -1.8243666}
+      - {x: -0.8112911, y: -2.8351347}
+      - {x: -0.19231465, y: -2.7927122}
+      - {x: 0.5772405, y: -2.8402052}
+      - {x: 0.5934305, y: -1.8244452}
   m_UseDelaunayMesh: 0
 --- !u!1818360608 &465228981
 PositionConstraint:
@@ -33252,7 +33252,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
